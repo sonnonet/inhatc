@@ -33,6 +33,8 @@ sudo systemctl start influxdb
 
 ## 4. 데이터베이스 만들기
 ```
+$ influx
+
 >create database <데이터베이스이름>
 ```
 ```
