@@ -27,34 +27,44 @@
   }
   ```
   
-  - LED Simple 2
+  - DHT11 라즈베리파이 연동 (Command)
   ```
-  int led = 9;
-  int val = 0;
+  #include <DHT11.h>
+
+  int pinNum = 7;
+  DHT11 dht11(pinNum);
+
+  String input = "";
+  String cmd = "temp";
+  String response = "";
+
 
   void setup() {
-
     Serial.begin(9600);
-
-    Serial.println("input 0~255");
-
-    pinMode(led, OUTPUT);
-
+    Serial.println("Starting Program....");
   }
 
   void loop() {
-
-    if (Serial.available()) {
-
-      val = Serial.parseInt();
-
-      Serial.println(val);
-
-      analogWrite(led, val);
-
-    }
   
-    delay(50);
+    float temp, humi;
+    if(Serial.available()){
+    input = Serial.readStringUntil('\n');
+
+   }
+   
+
+  if(Serial.available() == 0 && input == cmd)
+  { 
+    dht11.read(humi,temp); 
+    Serial.print("Temperature: ");
+    Serial.print(temp);
+    Serial.print("humidity: ");
+    Serial.print(humi);
+    Serial.println();
+    input = "";
+  }
+
+   delay(1000);
   }
   ```
   
