@@ -44,12 +44,12 @@ $ influx
 
 ## 1. Repository의 GPG key를 더하기
 ```
-curl https://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 ```
 
 ## 2. Repository를 더하기
 ```
-echo "deb https://dl.bintray.com/fg2it/deb stretch main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
 ```
 
 ## 3. 프로그램 설치
