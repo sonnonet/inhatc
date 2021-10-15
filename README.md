@@ -64,7 +64,7 @@ sudo service grafana-server start
 ```
 ## influxdb import with python
 ```
-sudo pip install influxdb
+sudo pip3 install influxdb
 ```
 ## gpio pin map
 ```
