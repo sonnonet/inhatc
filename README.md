@@ -1,6 +1,11 @@
 # inhatc
 # InfluxDB Installation
 
+### 라즈베리파이 eth0 down && up
+```
+  sudo ip link set down && sudo ip link set up
+```
+
 ## 0. 라즈베이파이 업데이트
 ```
   sudo apt update
