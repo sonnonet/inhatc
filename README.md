@@ -72,3 +72,13 @@ cd /tmp
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
 ```
+
+## 온습도 사용
+```
+sudo pip3 install Adafruit_DHT
+```
+```
+import Adafruit_DHT
+```
+참고 사이트 - https://blog.naver.com/PostView.nhn?blogId=emperonics&logNo=222092518468
+
