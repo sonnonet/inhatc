@@ -87,3 +87,11 @@ import Adafruit_DHT
 ```
 참고 사이트 - https://blog.naver.com/PostView.nhn?blogId=emperonics&logNo=222092518468
 
+## 기타 설정
+  - 한글깨짐
+```
+$ sudo apt-get install fonts-unfonts-core
+$ sudo apt-get install ibus ibus-hangul
+$ sudo reboot
+```
+
