@@ -10,13 +10,14 @@ while(True):
         device.reset_input_buffer()
         rcvBuf = device.read_until(size=12)
         rcvBuf = rcvBuf.decode()
+        print(rcvBuf)
 
         temp = rcvBuf.find('p')
 #        print(temp)
-        a = rcvBuf[2:temp]
-        b = int(a)
-        print (str(b)+"ppm")
+#        a = rcvBuf[2:temp]
+#        b = int(a)
+#        print (str(b)+"ppm")
     except Exception as e:
         print("Exception read" + str(e))
 
-    time.sleep(5)
+    time.sleep(1)
